@@ -5,6 +5,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Custom styles for background*/
 .container {
   width: 100%;
   height: 100vh;
@@ -16,6 +17,7 @@
   justify-content: center;
 }
 
+/* Custom styles for the profile card*/
 .card{
   width: 400px;
   height: 550px;
@@ -29,6 +31,7 @@
   backdrop-filter: blur(5px);
 }
 
+/* Custom styles for the profile image */
 .card img {
   width: 300px;
   height: 250px;
@@ -36,7 +39,7 @@
   object-fit: cover;
 }
 
-/* Animation during the start of the page */
+/* Animation during the start of the page for the text*/
 @keyframes text-simple-animation-rev {
   0% {
       background-size: 650%;
@@ -49,7 +52,7 @@
   }
 }
 
-/* Rainbow text animation */
+/* Text animation */
 @keyframes text-simple-animation {
   0% {
       background-size: 100%;
@@ -71,6 +74,8 @@
     }
 } */
 
+
+/* Custom styles for the text*/
 .card h2{
   font-family: "Scope One", sans-serif;
   font-weight: normal;
@@ -81,11 +86,14 @@
 
   /* Fallback: Set a background color. */
   /* background-color: #CA4246; */
+
     background-color: #D3D3D3;
-  /* Create the gradient. */
+
+  /* Customizing the gradient colors for the text */
    background-image: linear-gradient(
         45deg,
 
+      /* rainbow-gradient colors */
         /* #CA4246 16.666%, 
         #E16541 16.666%, 
         #E16541 33.333%, 
@@ -96,6 +104,8 @@
         #476098 66.666%, 
         #476098 83.333%, 
         #A7489B 83.333%); */
+
+      /* Gradient color for the text. */
         #2F4F4F 17.3999%,
         #fff 16.666%,
         #A9A9A9 33.333%,
@@ -107,7 +117,7 @@
         #fff 83.666%,
         #fff 83.333%);
   
-  /* Set the background size and repeat properties. */
+  /* Setting the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
 
@@ -141,10 +151,13 @@
   margin-top: 5px; */
 }
 
+
+/* Hover effects for the text element*/
 .card h2:hover{
   animation: text-simple-animation 0.5s ease-in forwards;
 }
 
+/* Styles for the text(second half)*/
 .card h2 span{
   font-size: 20px;
   margin: 5px auto;
@@ -158,6 +171,8 @@
   border: none;
 } */
 
+
+/* Styles for the social icons */
 .card .links img{
   width: 40px;
   height: 40px;
@@ -166,7 +181,7 @@
   transition: background 0.5s;  
 }
 
-/* Animate the size, outside */
+/* Animation for the social icons*/
 .card .links img:hover, 
 .card .links img:focus {
   color: #000;
