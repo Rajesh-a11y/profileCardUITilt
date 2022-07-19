@@ -3,33 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Title for the web page -->
     <title>Rajesh Sagayanathan Profile Card</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The script below is optional and can be used for alternate social icons, I commented it out for this particular style-->
+    
     <!-- <script src="https://kit.fontawesome.com/39dc38ff94.js" crossorigin="anonymous"></script>  -->
+
+    <!-- Linking styles sheet  -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- Container box for the main content -->
     <div class="container">
-      <div class="card">
-        <!-- <div class="profile"> -->
+      <div class="card" data-tilt="">
           <img src="./images/IMG_3845.jpg" alt="Picture">
-        <!-- </div> -->
-        <!-- <div class="text"> -->
-          <h2>Rajesh Sagayanathan<br/><span>Full-Stack Developer</span></h2>
-        <!-- </div> -->
+            <h2>Rajesh Sagayanathan<br/><span>Full-Stack Developer</span></h2>
+  
+        <!-- Social links -->
         <div class="links">
-            <button a href="https://github.com/Rajesh-a11y"><img src="./images/github.png" alt="Github" title="github"></img></a></button>
-            <button a href="https://portfolio.com/Rajesh-a11y"><img src="./images/suitcase.png" alt="Rajesh-Sagayanathan-Portfolio" title="portfolio"></img></a></button>
-            <button a href="https://resume.com/Rajesh-a11y"><img src="./images/cv.png" alt="Rajesh-Sagayanathan-Resume" title="resume"></img></a></button>
-            <button a href="https://buymeacoffee.com/Rajesh-a11y"><img src="./images/coffee.png" alt="Rajesh-Sagayanathan-Buymeacoffee" title="buymeacoffee"></img></a></button>
-            <button a href="https://buymeacoffee.com/Rajesh-a11y"><img src="./images/linkedin (1).png" alt="Rajesh-Sagayanathan-LinkedIn" title="LinkedIn"></img></a></button>
+            <a href="https://github.com/Rajesh-a11y"><img src="./images/github.png" alt="Github" title="Github"></img></a>
+            <a href="https://portfolio.com/Rajesh-a11y"><img src="./images/portfolio (3).png" alt="Rajesh-Sagayanathan-Portfolio" title="Portfolio"></img></a>
+            <a href="https://resume.com/Rajesh-a11y"><img src="./images/cv.png" alt="Rajesh-Sagayanathan-Resume" title="Resume"></img></a>
+            <a href="https://www.buymeacoffee.com/shadowmonarch"><img src="./images/coffee-cup.png" alt="Rajesh-Sagayanathan-Buymeacoffee" title="BuyMeACoffee"></img></a>
+            <a href="https://www.linkedin.com/in/rajesh-sagayanathan-010bb25a/"><img src="./images/linkedin.png" alt="Rajesh-Sagayanathan-LinkedIn" title="LinkedIn"></img></a>
         </div>
       </div>
     </div>
-    
-    
-    
-   
+
+    <!-- Adding the vanilla script for the tilt effect on the card  -->
+    <script src="vanilla-tilt.babel.js"></script>  
   </body>
 </html>

@@ -5,7 +5,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 .container {
   width: 100%;
   height: 100vh;
@@ -24,6 +23,10 @@
   text-align: center;
   padding: 50px 35px;
   border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
 }
 
 .card img {
@@ -34,58 +37,130 @@
   object-fit: cover;
 }
 
+/* Animation during the start of the page */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+      background-size: 650%;
+  }
+  40% {
+      background-size: 650%;
+  }
+  100% {
+      background-size: 100%;
+  }
+}
+
+/* Rainbow text animation */
+@keyframes rainbow-text-simple-animation {
+  0% {
+      background-size: 100%;
+  }
+  80% {
+      background-size: 650%;
+  }
+  100% {
+      background-size: 650%;
+  }
+}
+
+/* Gradient style animation */
+/* 
+@keyframes animationgradienttitle {
+  0% { background-position: 0 1600px;
+    } 100% {
+      background-position: 1600px 0;
+    }
+} */
+
 .card h2{
-  font-size: 40px;
+  font-family: "Scope One", sans-serif;
+  font-weight: normal;
+  font-size: 3em;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+
+  /* Fallback: Set a background color. */
+  background-color: #CA4246;
+  
+  /* Create the gradient. */
+   background-image: linear-gradient(
+        45deg,
+        #CA4246 16.666%, 
+        #E16541 16.666%, 
+        #E16541 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 50%, 
+        #8B9862 50%, 
+        #8B9862 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #A7489B 83.333%);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+
+
+/* gradient style customization*/
+  /* font-size: 2.5em;
+  color: #f5af19;
+  background: -webkit-linear-gradient(left, #f5af19, #f12711 , #f5af19);
+  background-size: 1600px 200px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 5s;
+  animation-name: animationgradienttitle;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards; */
+
+
+/* Normal plain text style */
+  /* font-size: 40px;
   font-weight: 500;
-  margin-top: 5px;
+  margin-top: 5px; */
+}
+
+.card h2:hover{
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
 }
 
 .card h2 span{
   font-size: 20px;
   margin: 5px auto;
   max-width: 100px;
-  color: teal;
+  color: #7FFFD4;
 }
 
-.card .links button{
+/* 
+.card .links {
   background: transparent;
   border: none;
-}
+} */
 
-.card .links button  img{
+.card .links img{
   width: 40px;
   height: 40px;
   border: none;
   margin: 10px 5px;
+  transition: background 0.5s;  
 }
 
-.card .links button img::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
-  box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001;
-  transition: all 0.3s ease;
+/* Animate the size, outside */
+.card .links img:hover, 
+.card .links img:focus {
+  color: #000;
+  box-shadow: 0 0.7em 0.5em -0.4em;
+  transform: translateY(-0.35em);
 }
 
-.card .links button img:hover {
-  background: #fff9;
-}
-
-.card .links button img:hover::after{
-  left: auto;
-  right: 0;
-  width: 100%;
-}
-
-.card .links button img:active{
-  top: 2px;
-}
