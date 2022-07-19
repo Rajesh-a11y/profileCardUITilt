@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/inggrid-koe-kbKEuU-YEIw-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  width: 400px;
+  height: 550px;
+  color: #fff;
+  text-align: center;
+  padding: 50px 35px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.card img {
+  width: 300px;
+  height: 250px;
+  border-radius: 10%;
+  
+  object-fit: cover;
+}
+
+.card h2{
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.card h2 span{
+  font-size: 20px;
+  margin: 5px auto;
+  max-width: 100px;
+  color: teal;
+}
+
+.card .links button{
+  background: transparent;
+  border: none;
+}
+
+.card .links button  img{
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 10px 5px;
+}
+
+.card .links button img::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+
+.card .links button img:hover {
+  background: #fff9;
+}
+
+.card .links button img:hover::after{
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.card .links button img:active{
+  top: 2px;
+}
