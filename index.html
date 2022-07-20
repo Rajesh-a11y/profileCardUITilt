@@ -19,7 +19,7 @@
   <body>
     <!-- Container box for the main content -->
     <div class="container">
-      <div class="card" data-tilt="">
+      <div class="card">
           <img src="./images/20210327_132428000_iOS.jpg" alt="Picture">
             <h2>Rajesh Sagayanathan<br/><span>Full-Stack Developer</span></h2>
   
@@ -35,6 +35,15 @@
     </div>
 
     <!-- Adding the vanilla script for the tilt effect on the card  -->
-    <script src="vanilla-tilt.babel.js"></script>  
+    <script src="vanilla-tilt.js"></script>  
+
+    <script>
+      VanillaTilt.init(document.querySelector(".card"), {
+		max: 25,
+		speed: 400,
+    glare: true,
+    "max-glare":0.1,
+	});
+    </script>
   </body>
 </html>
